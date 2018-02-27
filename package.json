@@ -1,6 +1,6 @@
 {
   "name": "egg-sequelize-wrapper",
-  "version": "0.0.1",
+  "version": "0.0.7",
   "description": "封装了sequelize的增删改方法，where条件书写更加流畅，并可以选择对查询后结果进行预处理",
   "eggPlugin": {
     "name": "sequelizeWrapper",
@@ -14,7 +14,11 @@
     "egg-plugin"
   ],
   "dependencies": {
-    "sequelize": "^4.4.2"
+    "sequelize": "^4.4.2",
+    "inflection": "^1.12.0",
+    "kind-of": "^6.0.2",
+    "lodash": "^4.17.5",
+    "moment": "^2.20.1"
   },
   "devDependencies": {
     "autod": "^3.0.0",
@@ -28,11 +32,10 @@
     "webstorm-disable-index": "^1.2.0"
   },
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=8.9.4"
   },
   "scripts": {
     "test": "npm run lint -- --fix && egg-bin pkgfiles && npm run test-local",
-    "test-local": "egg-bin test",
     "cov": "egg-bin cov",
     "lint": "eslint .",
     "ci": "egg-bin pkgfiles --check && npm run lint && npm run cov",
@@ -42,19 +45,20 @@
   "files": [
     "app.js",
     "agent.js",
-    "config"
+    "config",
+    "lib"
   ],
   "ci": {
     "version": "8, 9"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eggjs/egg-sequelize-wrapper.git"
+    "url": "git+https://github.com/dadiaoguai/egg-sequelize-wrapper.git"
   },
   "bugs": {
-    "url": "https://github.com/eggjs/egg/issues"
+    "url": "https://github.com/dadiaoguai/egg-sequelize-wrapper/issues"
   },
-  "homepage": "https://github.com/eggjs/egg-sequelize-wrapper#readme",
+  "homepage": "https://github.com/dadiaoguai/egg-sequelize-wrapper#readme",
   "author": "charlesliu",
   "license": "MIT"
 }
