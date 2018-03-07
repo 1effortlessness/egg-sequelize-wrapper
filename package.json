@@ -1,6 +1,6 @@
 {
   "name": "egg-sequelize-wrapper",
-  "version": "0.0.71",
+  "version": "0.0.8",
   "description": "封装了sequelize的增删改方法，where条件书写更加流畅，并可以选择对查询后结果进行预处理",
   "eggPlugin": {
     "name": "sequelizeWrapper",
